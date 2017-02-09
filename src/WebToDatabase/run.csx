@@ -20,7 +20,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         await context.SaveChangesAsync();
     }
 
-    return req.CreateResponse(HttpStatusCode.OK);    
+    return req.CreateResponse(HttpStatusCode.Created, data);    
 }
 
 public class RecordsContext : DbContext
